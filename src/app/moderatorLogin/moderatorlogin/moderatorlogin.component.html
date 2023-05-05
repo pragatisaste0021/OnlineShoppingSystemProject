@@ -1,0 +1,23 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+          <form #adminlogin="ngForm" novalidate  class="login-from" (ngSubmit)="validate()">
+             <tbody>
+                 <tr>
+                 Moderator Name:
+                 <td><input type="text" name="modName" placeholder="Enter your Name" [(ngModel)]="modName"></td>
+             </tr>
+             <tr><br></tr>
+             <tr>
+                 Moderator ID:<td><input type="text" name="modID" placeholder="Enter your Id" [(ngModel)]="modID"></td>
+             </tr>
+             <tr><br></tr>
+                 <tr>
+                     <td><button class="btn btn-info" type="submit">Submit</button></td>
+                 </tr>
+             <tr><br></tr> 
+              
+         </form>
+        
+        </div></div></div>

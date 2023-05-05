@@ -1,0 +1,59 @@
+<div class="main-content">
+    <header class="header-desktop">
+        <div class="section-content section-content-p30">
+            <div class="container-fluid">
+                <div class="header-wrap">
+                 <nav class="navbar navbar-default">
+                   <div class = "container-fluid">
+                     <ul class="nav navbar-nav">
+                       <li><a href="#">Home</a></li>
+                       <li><a href = "/logout()">Logout</a></li>
+                     </ul>
+                     
+                     </div>
+                 </nav>
+                 
+            </div>
+                <div class="account-wrap"></div>
+            </div>
+        </div>
+    </header>
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>User Id</th>
+                        <th>User FirstName</th>
+                        <th>User LastName</th>
+                        <th>User MobileNo</th>
+                        <th>Product Id</th>
+                        <th>PayId</th>
+                    </tr>
+            
+                </thead>
+               
+                <tr *ngFor="let tempUser of user">
+                    <td>{{tempUser.user_Id}}</td>
+                    <td>{{tempUser.user_first_name}}</td>
+                    <td>{{tempUser.user_last_name}}</td>
+                    <td>{{tempUser.user_mobile_no}}</td>
+                    <td>{{tempUser.product_Id}}</td>
+                    <td>{{tempUser.pay_Id}}</td>
+                    <button type="button" class="btn btn-md btn-success" (click)="updateUser(tempUser.user_Id)">Update</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteUser(tempUser.user_Id)">Delete </button>
+                    
+                </tr>
+                <button class="atu-btn-submit btn btn-info" (click) = "addUser()" >Add User</button>
+
+            </table>
+            </div>
+            
+
+           
+        </div>
+    </div>
+</div>
+

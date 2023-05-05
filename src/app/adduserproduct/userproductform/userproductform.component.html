@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+              <div><h1>Buy Product Product</h1></div>
+                <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Product ID</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="pdt_Id" [(ngModel)]="userproduct.pdt_Id" />
+                       
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">User Product Name</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="userpdt_name "[(ngModel)]="userproduct.userpdt_name" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label class ="col-sm-2 col-form-label">User Product Image</label>
+                      <div class ="col-sm-10">
+                          <input type ="text" name="userpdt_image"  [(ngModel)]="userproduct.userpdt_image"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class ="col-sm-2 col-form-label">User Id</label>
+                        <div class ="col-sm-10">
+                            <input type ="text" name="user_Id"  [(ngModel)]="userproduct.user_Id"/>
+                        </div>
+                      </div>
+
+                      
+
+                    <div class="form-group row">
+                      <div class="col-sm-2"><button type ="submit"class="btn btn-info">Submit</button></div>
+                      <div class="col-sm-2"><button type="reset" class="btn btn-info">Reset</button></div>
+                    </div>
+                </form>
+</div>
+</div>
+</div>
+
+
+
+

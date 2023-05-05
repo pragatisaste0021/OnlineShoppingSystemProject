@@ -1,0 +1,153 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="form-area" >
+            <div *ngIf="userdetail.user_id==0">
+                <h2>Registration form</h2>
+            </div>
+          <div *ngIf="userdetail.user_id>0">
+                <h2>Update {{userdetail.first_name}} {{userdetail.last_name}}</h2>
+            </div> 
+            <hr>
+            <form #spForm="ngForm" (ngSubmit)="SaveUsers()">
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">First Name</label>
+                    <div class="col-sm-10">
+                        <input type="text"  name="first_name" ngModel required [(ngModel)]="userdetail.first_name"  required minlength="4" appForbiddenName="bob"#name="ngModel" />
+                    </div>
+                    
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert">
+
+  <div *ngIf="name.errors?.['required']">
+    first_name Name is required.
+  </div>
+  <div *ngIf="name.errors?.['minlength']">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors?.['forbiddenName']">
+    Name cannot be Bob.
+  </div>
+
+</div>
+
+                </div>     
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="last_name" ngModel required [(ngModel)]="userdetail.last_name"  required minlength="4" appForbiddenName="bob"#name="ngModel" />
+                    </div>
+                    
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert">
+
+  <div *ngIf="name.errors?.['required']">
+    Last Name is required.
+  </div>
+  <div *ngIf="name.errors?.['minlength']">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors?.['forbiddenName']">
+    Name cannot be Bob.
+  </div>
+
+</div>
+
+                </div>
+<br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">User Name </label>
+                    <div class="col-sm-10">
+                        <input type="text" name="username" ngModel required [(ngModel)]="userdetail.username" required minlength="4" appForbiddenName="hhh"#name="ngModel"  />
+                    </div>
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                    class="alert">
+                
+                  <div *ngIf="name.errors?.['required']">
+                    User Name is required.
+                  </div>
+                  <div *ngIf="name.errors?.['minlength']">
+                    User Name must be at least 4 characters long.
+                  </div>
+                  <div *ngIf="name.errors?.['forbiddenName']">
+                  User  Name cannot be hhh.
+                  </div>
+                
+                </div>
+                
+                </div>
+<br>
+                <div class="form-group row">
+                    <label for="psw" class="col-sm-2 col-form-label">User Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" id="psw"  ngModel required [(ngModel)]="userdetail.userpassword" name="psw"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            required>
+                        <!-- <input type="text" name="userpassword" [(ngModel)]="user.userpassword" /> -->
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Residential Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="residentialAddress" ngModel required [(ngModel)]="userdetail.residentialAddress" required minlength="4" appForbiddenName="bob"#name="ngModel"/>
+                    </div>
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                    class="alert">
+                
+                  <div *ngIf="name.errors?.['required']">
+                    user_address is required.
+                  </div>
+                  <div *ngIf="name.errors?.['minlength']">
+                    User Address must be at least 50 characters long.
+                  </div>
+                  <div *ngIf="name.errors?.['forbiddenName']">
+                  User  Address cannot be Bob.
+                  </div>
+                
+                </div>
+                
+           
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Parmanent Address Address2</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="permanentAddress" ngModel required [(ngModel)]="userdetail.permanentAddress"  required minlength="4" appForbiddenName="bob"#name="ngModel"/>
+                    </div>
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                    class="alert">
+                
+                  <div *ngIf="name.errors?.['required']">
+                    user_address is required.
+                  </div>
+                  <div *ngIf="name.errors?.['minlength']">
+                    User Address must be at least 50 characters long.
+                  </div>
+                  <div *ngIf="name.errors?.['forbiddenName']">
+                  User  Address cannot be Bob.
+                  </div>
+                
+                </div>
+                
+           
+            
+                </div>
+<br>
+                <div class="form-group-row">
+                    <div class="col-sm-8">
+                        <button class="btn btn-info" type="submit">Submit</button> &nbsp; &nbsp;
+                        <button class="btn btn-info" type="reset">Reset</button>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>        
+    </div>
+   
+
+</div>
+
