@@ -1,0 +1,68 @@
+<div class="main-content">
+
+    <header class="header-desktop">
+        <div class="section-content section-content-p30">
+            <div class="container-fluid">
+                <div class="header-wrap">
+                 <nav class="navbar navbar-default">
+                   <div class = "container-fluid">
+                     <ul class="nav navbar-nav">
+                       <li><a href="#">Home</a></li>
+                       
+                       <li><a href = "/logout()">Logout</a></li>
+                     </ul>
+                     
+                     </div>
+                 </nav>
+                 
+            </div>
+                <div class="account-wrap"></div>
+            </div>
+        </div>
+    </header>
+    <div class="section-content section-content-p30">
+
+
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Product Quantity</th>
+                        <th>Product Price</th>
+                        <th>Product Brand</th>
+                        <th>Product Description</th>
+                    </tr>
+            
+                </thead>
+               
+                <br>
+                <tr *ngFor="let tempPro of product" style="text-align: start;">
+                    <td>{{tempPro.pdt_name}}</td>
+                    <td><br><img src={{tempPro.pdt_image}} alt="{{tempPro.pdt_name}}" width="120px" height="30px"><br></td>
+                    <td>{{tempPro.pdt_quantity}}</td>
+                    <td>{{tempPro.pdt_cost}}</td>
+                    <td>{{tempPro.pdt_brand}}</td>
+                    <td>{{tempPro.pdt_description}}</td>
+
+                    <br><br>
+                    <button type="button" class="btn btn-md btn-success" (click)="buyProduct()">Buy Product</button>
+                    
+                </tr>
+                
+
+                <br>
+            </table>
+            </div>
+            
+
+           
+        </div>
+    
+    </div>
+</div>
+
+

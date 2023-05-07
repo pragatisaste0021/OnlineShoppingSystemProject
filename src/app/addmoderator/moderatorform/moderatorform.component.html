@@ -1,0 +1,93 @@
+<div class="main-content">
+
+  <header class="header-desktop">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="header-wrap">
+             <nav class="navbar navbar-default">
+               <div class = "container-fluid">
+                 <ul class="nav navbar-nav">
+                   <li><a href="#">Home</a></li>
+                   
+                   <li><a href = "/logout()">Logout</a></li>
+                 </ul>
+                 
+                 </div>
+             </nav>
+             
+        </div>
+            <div class="account-wrap"></div>
+        </div>
+    </div>
+</header>
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+              <div *ngIf="isEditable != true"><h1>Add Mderator</h1></div>
+              <div *ngIf="isEditable == true"><h1>Update Moderator</h1></div>
+                <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Moderator ID</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="modID" [(ngModel)]="moderator.modID" />
+                       
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label"> Moderator Name</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="modName"[(ngModel)]="moderator.modName" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label class ="col-sm-2 col-form-label"> Moderator Address</label>
+                      <div class ="col-sm-10">
+                          <input type ="text" name="modAddress"  [(ngModel)]="moderator.modAddress"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class ="col-sm-2 col-form-label">Moderator Age</label>
+                        <div class ="col-sm-10">
+                            <input type ="text" name="age"  [(ngModel)]="moderator.age"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class ="col-sm-2 col-form-label">Moderator Education</label>
+                        <div class ="col-sm-10">
+                            <input type ="text" name="education"  [(ngModel)]="moderator.education"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class ="col-sm-2 col-form-label">Moderator DateOfBirth</label>
+                        <div class ="col-sm-10">
+                            <input type ="date" name="dateOfBirth"  [(ngModel)]="moderator.dateOfBirth"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class ="col-sm-2 col-form-label">Email Id</label>
+                        <div class ="col-sm-10">
+                            <input type ="text" name="emailId"  [(ngModel)]="moderator.emailId"/>
+                        </div>
+                      </div>
+
+                    <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Mobile No</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="mob_no"  [(ngModel)]="moderator.mob_no"/>
+                    </div>
+                     </div>
+                 
+                    <div class="form-group row">
+                      <div class="col-sm-2"><button type ="submit"class="btn btn-info">Submit</button></div>
+                      <div class="col-sm-2"><button type="reset" class="btn btn-info">Reset</button></div>
+                    </div>
+                </form>
+</div>
+</div>
+</div>
+
+
