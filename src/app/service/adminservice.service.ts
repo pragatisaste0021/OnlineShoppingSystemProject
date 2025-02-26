@@ -9,7 +9,6 @@ export class AdminserviceService {
 
   administratorURL: string="http://localhost:8080/admin1/list";
 
-
   constructor(private http:HttpClient) { }
 
   getAllAdmin():Observable<any>{
