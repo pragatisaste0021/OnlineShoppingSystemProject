@@ -24,7 +24,6 @@ export class OrderformComponent implements OnInit{
     if(this.isEditable){
       this.orderservice.updateOrder(this.order).subscribe(data=>
         this.router.navigateByUrl("/orderlist"));
-
     }
     else{
     this.orderservice.saveOrder( this.order).subscribe(data =>
