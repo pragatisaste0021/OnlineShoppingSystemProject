@@ -25,7 +25,6 @@ export class ModeratorformComponent {
     if(this.isEditable){
       this.moderatorservice.updateModerator(this.moderator).subscribe(data=>
         this.router.navigateByUrl("/moderatorlist"));
-
     }
     else{
     this.moderatorservice.saveModerator( this.moderator).subscribe(data =>
