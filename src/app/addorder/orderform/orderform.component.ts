@@ -8,6 +8,7 @@ import { OrderserviceService } from 'src/app/service/orderservice.service';
   templateUrl: './orderform.component.html',
   styleUrls: ['./orderform.component.css']
 })
+  
 export class OrderformComponent implements OnInit{
 
   order : Orderdetail = new Orderdetail(0, "", new Date(), new Date(), "", 0, 0);
