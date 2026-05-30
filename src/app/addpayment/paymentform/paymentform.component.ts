@@ -16,7 +16,6 @@ export class PaymentformComponent {
 
   ngOnInit(): void {
     this.activateRoute.paramMap.subscribe(()=>this.payment);
-
   }
 
   onSubmit(){
